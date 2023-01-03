@@ -1,24 +1,323 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kwI-h9-Hg9">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="ur0-hk-inT">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tabBarController storyboardIdentifier="HomeVC" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="kwI-h9-Hg9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Lhf-qc-iqi"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n5V-fJ-0yM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance" stackedItemPositioning="centered" stackedItemSpacing="60">
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Exf-ZY-jAf" kind="relationship" relationship="viewControllers" id="qXW-aJ-H6L"/>
+                        <segue destination="xLI-jF-O6q" kind="relationship" relationship="viewControllers" id="Mjy-uX-iNk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1V-3G-UZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="4080" y="381"/>
+        </scene>
+        <!--Расписание-->
+        <scene sceneID="R7R-4h-6to">
+            <objects>
+                <navigationController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="Exf-ZY-jAf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="Расписание" image="calendar" catalog="system" id="pGt-ib-l69">
+                        <inset key="imageInsets" minX="3" minY="-4" maxX="-1" maxY="0.0"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZRh-F9-BCN">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YfL-Lj-pfO" kind="relationship" relationship="rootViewController" id="9dg-4b-TN1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eud-G6-gHq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5884" y="-67"/>
+        </scene>
+        <!--Schedule View Controller-->
+        <scene sceneID="tIf-vH-wMH">
+            <objects>
+                <viewController id="YfL-Lj-pfO" customClass="ScheduleViewController" customModule="schedule_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wiH-ic-0ZY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5ec-BF-QjX">
+                                <rect key="frame" x="0.0" y="125" width="414" height="688"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dayCell" rowHeight="320" id="5Qv-DE-QF1" customClass="DayTableViewCell" customModule="schedule_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="320"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Qv-DE-QF1" id="EAe-0P-oU2">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KFn-kG-sKr">
+                                                    <rect key="frame" x="19.999999999999993" y="10.999999999999998" width="111.33333333333331" height="18.333333333333329"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wo1-8L-dLP">
+                                                            <rect key="frame" x="0.0" y="0.0" width="69.333333333333329" height="18.333333333333332"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23.10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkC-qE-jHY">
+                                                            <rect key="frame" x="79.333333333333329" y="0.0" width="32" height="18.333333333333332"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cWK-gv-rdd">
+                                                    <rect key="frame" x="0.0" y="43" width="414" height="277"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <prototypes>
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dayInfoCell" rowHeight="100" id="MlI-hc-gWO" customClass="DayInfoTableViewCell" customModule="schedule_app" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="50" width="414" height="100"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MlI-hc-gWO" id="ek3-pp-Idk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LGM-Js-M9z">
+                                                                        <rect key="frame" x="100" y="5" width="214" height="90"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Computer Organization Architecture" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQO-s9-OaE">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="214" height="69"/>
+                                                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="13"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Askar Sharipov" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETW-qT-NIo">
+                                                                                <rect key="frame" x="0.0" y="74" width="214" height="16"/>
+                                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EZm-9f-IKG">
+                                                                        <rect key="frame" x="20" y="5" width="30.666666666666671" height="90"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="10:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENs-YF-BaB">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="30.666666666666668" height="58"/>
+                                                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="12"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0LS-9Z-6Ie">
+                                                                                <rect key="frame" x="0.0" y="58.000000000000007" width="30.666666666666668" height="17.333333333333336"/>
+                                                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="14"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jy2-dq-NUW">
+                                                                                <rect key="frame" x="0.0" y="75.333333333333329" width="30.666666666666668" height="14.666666666666671"/>
+                                                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="12"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2RC-Up-YsF">
+                                                                        <rect key="frame" x="70" y="-1" width="5.6666666666666714" height="101.66666666666667"/>
+                                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                                    </view>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xpz-vm-alI">
+                                                                        <rect key="frame" x="350.66666666666669" y="10" width="48.333333333333314" height="80"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Lecture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fo-vM-iKk">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="55.333333333333336"/>
+                                                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="12"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C1.3.256" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpX-W1-ZbE">
+                                                                                <rect key="frame" x="0.0" y="65.333333333333329" width="48.333333333333336" height="14.666666666666671"/>
+                                                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="12"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="LGM-Js-M9z" firstAttribute="top" secondItem="ek3-pp-Idk" secondAttribute="top" constant="5" id="21S-eP-quM"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="EZm-9f-IKG" secondAttribute="bottom" constant="5" id="2sX-Mq-imI"/>
+                                                                    <constraint firstItem="EZm-9f-IKG" firstAttribute="leading" secondItem="ek3-pp-Idk" secondAttribute="leading" constant="20" symbolic="YES" id="Ij4-zA-MH0"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="xpz-vm-alI" secondAttribute="bottom" constant="10" id="Ki9-n0-gvI"/>
+                                                                    <constraint firstItem="2RC-Up-YsF" firstAttribute="width" secondItem="ek3-pp-Idk" secondAttribute="width" multiplier="0.0133333" id="MoP-6f-mEx"/>
+                                                                    <constraint firstItem="2RC-Up-YsF" firstAttribute="top" secondItem="ek3-pp-Idk" secondAttribute="top" constant="-1" id="MrR-Hg-qqr"/>
+                                                                    <constraint firstItem="EZm-9f-IKG" firstAttribute="top" secondItem="ek3-pp-Idk" secondAttribute="top" constant="5" id="NzZ-Mf-Chd"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="LGM-Js-M9z" secondAttribute="bottom" constant="5" id="VJU-YZ-Jxb"/>
+                                                                    <constraint firstItem="2RC-Up-YsF" firstAttribute="leading" secondItem="ek3-pp-Idk" secondAttribute="leading" constant="70" id="bjj-ol-464"/>
+                                                                    <constraint firstItem="2RC-Up-YsF" firstAttribute="height" secondItem="ek3-pp-Idk" secondAttribute="height" multiplier="1.01786" id="gY2-rg-Cfo"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="2RC-Up-YsF" secondAttribute="bottom" id="l6O-JV-Zyc"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="xpz-vm-alI" secondAttribute="trailing" constant="15" id="lFI-zk-UhZ"/>
+                                                                    <constraint firstItem="LGM-Js-M9z" firstAttribute="leading" secondItem="ek3-pp-Idk" secondAttribute="leading" constant="100" id="po7-Uh-S84"/>
+                                                                    <constraint firstItem="xpz-vm-alI" firstAttribute="top" secondItem="ek3-pp-Idk" secondAttribute="top" constant="10" id="tbo-DS-EPM"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="LGM-Js-M9z" secondAttribute="trailing" constant="100" id="z9D-PG-0gg"/>
+                                                                </constraints>
+                                                            </tableViewCellContentView>
+                                                            <connections>
+                                                                <outlet property="firstTimeLabel" destination="ENs-YF-BaB" id="giy-1G-dT9"/>
+                                                                <outlet property="lessonTypeLabel" destination="0fo-vM-iKk" id="KeD-UK-ByH"/>
+                                                                <outlet property="placeLabel" destination="KpX-W1-ZbE" id="Imo-0R-0bp"/>
+                                                                <outlet property="secondTimeLabel" destination="jy2-dq-NUW" id="fwy-yG-tLF"/>
+                                                                <outlet property="subjectLabel" destination="tQO-s9-OaE" id="TZU-51-mFn"/>
+                                                                <outlet property="tacherLabel" destination="ETW-qT-NIo" id="EFa-Js-z0r"/>
+                                                            </connections>
+                                                        </tableViewCell>
+                                                    </prototypes>
+                                                </tableView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cWK-gv-rdd" firstAttribute="leading" secondItem="EAe-0P-oU2" secondAttribute="leading" id="BLe-PM-ndu"/>
+                                                <constraint firstAttribute="bottom" secondItem="cWK-gv-rdd" secondAttribute="bottom" id="Hj3-n0-vNQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="cWK-gv-rdd" secondAttribute="trailing" id="NWu-fg-bPD"/>
+                                                <constraint firstItem="cWK-gv-rdd" firstAttribute="top" secondItem="EAe-0P-oU2" secondAttribute="top" constant="43" id="Tyi-rr-QBr"/>
+                                                <constraint firstItem="KFn-kG-sKr" firstAttribute="top" secondItem="EAe-0P-oU2" secondAttribute="top" constant="10.999999999999998" id="bhe-W1-OqV"/>
+                                                <constraint firstItem="KFn-kG-sKr" firstAttribute="leading" secondItem="EAe-0P-oU2" secondAttribute="leading" constant="20" symbolic="YES" id="wNY-g1-jUs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="gkC-qE-jHY" id="AeY-kC-wsA"/>
+                                            <outlet property="dayInfoTableView" destination="cWK-gv-rdd" id="emH-Qg-VEN"/>
+                                            <outlet property="weekDayLabel" destination="wo1-8L-dLP" id="fho-Gb-mtL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SE-2109" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0v-Jq-Fv3">
+                                <rect key="frame" x="20" y="74" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="C6K-9r-LTC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ntz-7X-C4O"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="t0v-Jq-Fv3" firstAttribute="leading" secondItem="wiH-ic-0ZY" secondAttribute="leadingMargin" id="1Qy-Jw-Ez4"/>
+                            <constraint firstItem="t0v-Jq-Fv3" firstAttribute="centerX" secondItem="5ec-BF-QjX" secondAttribute="centerX" id="7CE-cg-0Lb"/>
+                            <constraint firstItem="Ntz-7X-C4O" firstAttribute="trailing" secondItem="5ec-BF-QjX" secondAttribute="trailing" id="K1f-yN-nyN"/>
+                            <constraint firstItem="Ntz-7X-C4O" firstAttribute="bottom" secondItem="5ec-BF-QjX" secondAttribute="bottom" id="QEN-YW-IgX"/>
+                            <constraint firstItem="5ec-BF-QjX" firstAttribute="leading" secondItem="Ntz-7X-C4O" secondAttribute="leading" id="SDf-aO-Tx6"/>
+                            <constraint firstItem="t0v-Jq-Fv3" firstAttribute="top" secondItem="Ntz-7X-C4O" secondAttribute="top" constant="30" id="WeO-wJ-f7M"/>
+                            <constraint firstItem="5ec-BF-QjX" firstAttribute="top" secondItem="t0v-Jq-Fv3" secondAttribute="bottom" constant="11" id="wiF-0g-EKj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uc5-e2-Wb0"/>
+                    <connections>
+                        <outlet property="dayTableView" destination="5ec-BF-QjX" id="5h3-xa-W3Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XQq-Tg-p6a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6792.753623188406" y="-68.973214285714278"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="dLA-xu-uSS">
+            <objects>
+                <navigationController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="xLI-jF-O6q" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Настройки" image="gearshape" catalog="system" id="yFG-RY-bDl">
+                        <inset key="imageInsets" minX="-1" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iJL-ve-EbL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="x2P-uL-0T8" kind="relationship" relationship="rootViewController" id="T8k-tr-Z2N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHH-w3-IqV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5883" y="850"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="AT7-Vu-2YM">
+            <objects>
+                <tableViewController id="x2P-uL-0T8" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="tUq-Tt-ONL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qmZ-dO-egF">
+                                <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qmZ-dO-egF" id="5Oi-OZ-6Gw">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="x2P-uL-0T8" id="T6F-9t-h1u"/>
+                            <outlet property="delegate" destination="x2P-uL-0T8" id="scP-B3-xoy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Iuz-SP-b3k"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ww6-y5-Svl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6722" y="850"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
