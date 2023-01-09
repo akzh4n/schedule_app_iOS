@@ -22,17 +22,34 @@ class DayInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var firstTimeLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
     }
     
     
     func set(object: DayInfoModel) {
-        self.subjectLabel.text = object.subject
-        self.tacherLabel.text = object.teacher
-        self.placeLabel.text = object.place
-        self.lessonTypeLabel.text = object.lessonType
-        self.firstTimeLabel.text = object.firstTime
-        self.secondTimeLabel.text = object.secondTime
+        for subject in object.subject {
+            self.subjectLabel.text = subject
+            
+
+        }
+        for teacher in object.teacher {
+            self.tacherLabel.text = teacher
+        }
+        for place in object.place {
+            self.placeLabel.text = place
+        }
+        for lesson in object.lessonType {
+            self.lessonTypeLabel.text = lesson
+        }
+        for firstTime in object.firstTime {
+            self.firstTimeLabel.text = firstTime
+        }
+        for secondTime in object.secondTime {
+            self.secondTimeLabel.text = secondTime
+        }
+        
+
+        
     }
     
 

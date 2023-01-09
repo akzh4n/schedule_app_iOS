@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kwI-h9-Hg9">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -67,18 +67,18 @@
             <objects>
                 <viewController id="YfL-Lj-pfO" customClass="ScheduleViewController" customModule="schedule_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wiH-ic-0ZY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5ec-BF-QjX">
-                                <rect key="frame" x="0.0" y="125" width="414" height="688"/>
+                                <rect key="frame" x="0.0" y="153" width="375" height="576"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dayCell" rowHeight="320" id="5Qv-DE-QF1" customClass="DayTableViewCell" customModule="schedule_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="320"/>
+                                        <rect key="frame" x="0.0" y="50" width="375" height="320"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Qv-DE-QF1" id="EAe-0P-oU2">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KFn-kG-sKr">
@@ -99,27 +99,27 @@
                                                     </subviews>
                                                 </stackView>
                                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cWK-gv-rdd">
-                                                    <rect key="frame" x="0.0" y="43" width="414" height="277"/>
+                                                    <rect key="frame" x="0.0" y="43" width="375" height="277"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <prototypes>
                                                         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dayInfoCell" rowHeight="100" id="MlI-hc-gWO" customClass="DayInfoTableViewCell" customModule="schedule_app" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="50" width="414" height="100"/>
+                                                            <rect key="frame" x="0.0" y="50" width="375" height="100"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MlI-hc-gWO" id="ek3-pp-Idk">
-                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LGM-Js-M9z">
-                                                                        <rect key="frame" x="100" y="5" width="214" height="90"/>
+                                                                        <rect key="frame" x="100" y="5" width="175" height="90"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Computer Organization Architecture" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQO-s9-OaE">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="214" height="69"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="175" height="69"/>
                                                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="13"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Askar Sharipov" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETW-qT-NIo">
-                                                                                <rect key="frame" x="0.0" y="74" width="214" height="16"/>
+                                                                                <rect key="frame" x="0.0" y="74" width="175" height="16"/>
                                                                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -150,11 +150,11 @@
                                                                         </subviews>
                                                                     </stackView>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2RC-Up-YsF">
-                                                                        <rect key="frame" x="70" y="-1" width="5.6666666666666714" height="101.66666666666667"/>
+                                                                        <rect key="frame" x="70" y="-1" width="5" height="101.66666666666667"/>
                                                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                                     </view>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xpz-vm-alI">
-                                                                        <rect key="frame" x="350.66666666666669" y="10" width="48.333333333333314" height="80"/>
+                                                                        <rect key="frame" x="311.66666666666669" y="10" width="48.333333333333314" height="80"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Lecture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fo-vM-iKk">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="55.333333333333336"/>
@@ -220,10 +220,10 @@
                                 <sections/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SE-2109" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0v-Jq-Fv3">
-                                <rect key="frame" x="20" y="74" width="374" height="40"/>
-                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <rect key="frame" x="35" y="82" width="305" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="C6K-9r-LTC"/>
+                                    <constraint firstAttribute="height" constant="40" id="vcx-xI-XhS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -233,23 +233,24 @@
                         <viewLayoutGuide key="safeArea" id="Ntz-7X-C4O"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="t0v-Jq-Fv3" firstAttribute="leading" secondItem="wiH-ic-0ZY" secondAttribute="leadingMargin" id="1Qy-Jw-Ez4"/>
-                            <constraint firstItem="t0v-Jq-Fv3" firstAttribute="centerX" secondItem="5ec-BF-QjX" secondAttribute="centerX" id="7CE-cg-0Lb"/>
+                            <constraint firstItem="Ntz-7X-C4O" firstAttribute="trailing" secondItem="t0v-Jq-Fv3" secondAttribute="trailing" constant="35" id="0BI-S1-FRq"/>
+                            <constraint firstItem="5ec-BF-QjX" firstAttribute="top" secondItem="t0v-Jq-Fv3" secondAttribute="bottom" constant="31" id="35K-hW-qEw"/>
                             <constraint firstItem="Ntz-7X-C4O" firstAttribute="trailing" secondItem="5ec-BF-QjX" secondAttribute="trailing" id="K1f-yN-nyN"/>
                             <constraint firstItem="Ntz-7X-C4O" firstAttribute="bottom" secondItem="5ec-BF-QjX" secondAttribute="bottom" id="QEN-YW-IgX"/>
                             <constraint firstItem="5ec-BF-QjX" firstAttribute="leading" secondItem="Ntz-7X-C4O" secondAttribute="leading" id="SDf-aO-Tx6"/>
-                            <constraint firstItem="t0v-Jq-Fv3" firstAttribute="top" secondItem="Ntz-7X-C4O" secondAttribute="top" constant="30" id="WeO-wJ-f7M"/>
-                            <constraint firstItem="5ec-BF-QjX" firstAttribute="top" secondItem="t0v-Jq-Fv3" secondAttribute="bottom" constant="11" id="wiF-0g-EKj"/>
+                            <constraint firstItem="t0v-Jq-Fv3" firstAttribute="leading" secondItem="Ntz-7X-C4O" secondAttribute="leading" constant="35" id="Y7j-sC-93I"/>
+                            <constraint firstItem="t0v-Jq-Fv3" firstAttribute="top" secondItem="Ntz-7X-C4O" secondAttribute="top" constant="35" id="u5q-il-Wwi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Uc5-e2-Wb0"/>
                     <connections>
                         <outlet property="dayTableView" destination="5ec-BF-QjX" id="5h3-xa-W3Z"/>
+                        <outlet property="groupLabel" destination="t0v-Jq-Fv3" id="9K3-fB-LmW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQq-Tg-p6a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6792.753623188406" y="-68.973214285714278"/>
+            <point key="canvasLocation" x="6789.8550724637689" y="-69.642857142857139"/>
         </scene>
         <!--Настройки-->
         <scene sceneID="dLA-xu-uSS">
@@ -260,7 +261,7 @@
                     </tabBarItem>
                     <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iJL-ve-EbL">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -276,15 +277,15 @@
             <objects>
                 <tableViewController id="x2P-uL-0T8" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="tUq-Tt-ONL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qmZ-dO-egF">
-                                <rect key="frame" x="0.0" y="50" width="414" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qmZ-dO-egF" id="5Oi-OZ-6Gw">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -315,9 +316,6 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
