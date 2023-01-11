@@ -14,6 +14,7 @@ class FirstTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDataS
    
     let db = Firestore.firestore()
 
+
     @IBOutlet weak var firstDayInfoTableView: UITableView!
     
     
@@ -33,12 +34,41 @@ class FirstTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDataS
         weekDayLabel.text = CurrentDateFormatter().setCurrentData(currentDateInt: 0)
         dateLabel.text = CurrentDateFormatter().setCurrentDataNumber(currentDateInt: 0)
         
-        fetchData(dayWeek: currentDay)
-        print(currentDay)
+        self.dayExceptions()
     }
     
     
+    func dayExceptions() {
+        if currentDay == "Saturday" {
+            self.loadErrorLabel()
+        } else if currentDay == "Sunday" {
+            self.loadErrorLabel()
+        } else {
+            fetchData(dayWeek: currentDay)
+        }
+        
+    }
     
+    
+    func loadErrorLabel() {
+        
+        let message = UILabel()
+        
+        message.tintColor = .black
+        message.translatesAutoresizingMaskIntoConstraints = false
+        message.font = UIFont(name: "Montserrat-Semibold", size: 18)
+        message.text = "There are no lessons"
+        message.textAlignment = .center
+        firstDayInfoTableView.addSubview(message)
+        
+        let marginGuide = firstDayInfoTableView.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            message.topAnchor.constraint(equalTo: marginGuide.topAnchor, constant: 20),
+            message.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor),
+            message.heightAnchor.constraint(equalToConstant: 100),
+            message.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor)
+        ])
+    }
     
     
     
@@ -58,11 +88,16 @@ class FirstTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDataS
                    let firstTimeArray = data!["startTime"] as! [String]
                    let secondTimeArray = data!["endTime"] as! [String]
                    
+                   
+                 
                    for i in 0..<teacherArray.count {
                        let scheduleItem = DayInfoModel(teacher: [teacherArray[i]], subject: [subjectArray[i]], place: [placeArray[i]], lessonType: [lessonTypeArray[i]], firstTime: [firstTimeArray[i]], secondTime: [secondTimeArray[i]])
                        self.firstDayInfoObjects.append(scheduleItem)
 
                    }
+                   
+                   
+                   
                    
                    
                  

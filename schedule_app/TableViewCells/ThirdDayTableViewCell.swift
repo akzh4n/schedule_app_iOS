@@ -9,6 +9,7 @@ import UIKit
 
 class ThirdDayTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lineView: UIView!
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var lessonTypeLabel: UILabel!
     @IBOutlet weak var secondTimeLabel: UILabel!
@@ -35,6 +36,7 @@ class ThirdDayTableViewCell: UITableViewCell {
         }
         for lesson in object.lessonType {
             self.lessonTypeLabel.text = lesson
+            self.setColorToView()
         }
         for firstTime in object.firstTime {
             self.firstTimeLabel.text = firstTime
@@ -45,6 +47,14 @@ class ThirdDayTableViewCell: UITableViewCell {
         
 
         
+    }
+    
+    func setColorToView() {
+        if lessonTypeLabel.text == "Lecture" {
+            lineView.backgroundColor = .blue
+        } else if lessonTypeLabel.text == "Practice"{
+            lineView.backgroundColor = .systemGreen
+        }
     }
 
 }

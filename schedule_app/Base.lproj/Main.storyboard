@@ -26,7 +26,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="n5V-fJ-0yM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -72,7 +72,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5ec-BF-QjX">
                                 <rect key="frame" x="0.0" y="153" width="375" height="576"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="firstDayCell" rowHeight="320" id="5Qv-DE-QF1" customClass="FirstTableViewCell" customModule="schedule_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="375" height="320"/>
@@ -192,6 +192,7 @@
                                                             <connections>
                                                                 <outlet property="firstTimeLabel" destination="ENs-YF-BaB" id="KrV-n1-3aH"/>
                                                                 <outlet property="lessonTypeLabel" destination="0fo-vM-iKk" id="MNj-aH-I9T"/>
+                                                                <outlet property="lineView" destination="2RC-Up-YsF" id="Lco-fn-Jrs"/>
                                                                 <outlet property="placeLabel" destination="KpX-W1-ZbE" id="mtq-N3-3QD"/>
                                                                 <outlet property="secondTimeLabel" destination="jy2-dq-NUW" id="66E-eL-hxK"/>
                                                                 <outlet property="subjectLabel" destination="tQO-s9-OaE" id="blH-gG-6fO"/>
@@ -334,6 +335,7 @@
                                                             <connections>
                                                                 <outlet property="firstTimeLabel" destination="rQn-8d-1gv" id="cZi-u2-E2t"/>
                                                                 <outlet property="lessonTypeLabel" destination="Ydc-TD-8OL" id="xbb-Qo-Wqi"/>
+                                                                <outlet property="lineView" destination="Gd8-B1-Q7V" id="Tmd-03-smZ"/>
                                                                 <outlet property="placeLabel" destination="8Ac-q2-mZE" id="2hV-e7-iDg"/>
                                                                 <outlet property="secondTimeLabel" destination="AlF-dk-Aga" id="wU2-IJ-bOe"/>
                                                                 <outlet property="subjectLabel" destination="lko-Hm-6s8" id="OQf-lg-LQr"/>
@@ -476,6 +478,7 @@
                                                             <connections>
                                                                 <outlet property="firstTimeLabel" destination="t7b-5B-gLv" id="LlF-ap-mrj"/>
                                                                 <outlet property="lessonTypeLabel" destination="pFU-va-6nn" id="KSV-hu-Ha3"/>
+                                                                <outlet property="lineView" destination="N57-KY-tNW" id="a98-KR-QG0"/>
                                                                 <outlet property="placeLabel" destination="Sbj-Al-7Gm" id="xZ3-tR-e24"/>
                                                                 <outlet property="secondTimeLabel" destination="0Np-7I-Cd1" id="ZoU-mE-fdB"/>
                                                                 <outlet property="subjectLabel" destination="wa0-O6-XNe" id="pBK-0C-rcv"/>
@@ -589,9 +592,6 @@
     <resources>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="gearshape" catalog="system" width="128" height="123"/>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

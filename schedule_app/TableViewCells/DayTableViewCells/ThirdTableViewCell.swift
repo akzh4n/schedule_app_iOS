@@ -31,12 +31,45 @@ class ThirdTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDataS
         weekDayLabel.text = CurrentDateFormatter().setCurrentData(currentDateInt: 2)
         dateLabel.text = CurrentDateFormatter().setCurrentDataNumber(currentDateInt: 2)
         
-        fetchData(dayWeek: currentDay)
+        self.dayExceptions()
         
     }
     
     
+    func dayExceptions() {
+        if currentDay == "Saturday" {
+            self.loadErrorLabel()
+        } else if currentDay == "Sunday" {
+            self.loadErrorLabel()
+        } else {
+            fetchData(dayWeek: currentDay)
+        }
+        
+    }
+    
+    
+    func loadErrorLabel() {
+        
+        let message = UILabel()
+        
+        message.tintColor = .black
+        message.translatesAutoresizingMaskIntoConstraints = false
+        message.font = UIFont(name: "Montserrat-Semibold", size: 18)
+        message.text = "There are no lessons"
+        message.textAlignment = .center
+        thirdDayInfoTableView.addSubview(message)
+        
+        let marginGuide = thirdDayInfoTableView.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            message.topAnchor.constraint(equalTo: marginGuide.topAnchor, constant: 20),
+            message.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor),
+            message.heightAnchor.constraint(equalToConstant: 100),
+            message.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor)
+        ])
+    }
+    
     func fetchData(dayWeek: String) {
+        
            db.collection("SE-2109").document(dayWeek).getDocument { [self] snapshot, error in
                if error != nil {
                    print("Error")

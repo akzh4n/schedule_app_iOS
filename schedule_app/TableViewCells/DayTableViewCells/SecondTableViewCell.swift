@@ -35,8 +35,41 @@ class SecondTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewData
         weekDayLabel.text = CurrentDateFormatter().setCurrentData(currentDateInt: 1)
         dateLabel.text = CurrentDateFormatter().setCurrentDataNumber(currentDateInt: 1)
         
-        fetchData(dayWeek: currentDay)
+        self.dayExceptions() 
         
+    }
+    
+    
+    func dayExceptions() {
+        if currentDay == "Saturday" {
+            self.loadErrorLabel()
+        } else if currentDay == "Sunday" {
+            self.loadErrorLabel()
+        } else {
+            fetchData(dayWeek: currentDay)
+        }
+        
+    }
+    
+    
+    func loadErrorLabel() {
+        
+        let message = UILabel()
+        
+        message.tintColor = .black
+        message.translatesAutoresizingMaskIntoConstraints = false
+        message.font = UIFont(name: "Montserrat-Semibold", size: 18)
+        message.text = "There are no lessons"
+        message.textAlignment = .center
+        secondDayInfoTableView.addSubview(message)
+        
+        let marginGuide = secondDayInfoTableView.layoutMarginsGuide
+        NSLayoutConstraint.activate([
+            message.topAnchor.constraint(equalTo: marginGuide.topAnchor, constant: 20),
+            message.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor),
+            message.heightAnchor.constraint(equalToConstant: 100),
+            message.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor)
+        ])
     }
     
     

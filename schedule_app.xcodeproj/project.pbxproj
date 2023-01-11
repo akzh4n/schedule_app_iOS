@@ -73,6 +73,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73819FCB296F2DFD006F5C57 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				73819FBD296EE40A006F5C57 /* FIrstDayTableViewCell.swift */,
+				73819FBF296EE414006F5C57 /* SecondDayTableViewCell.swift */,
+				73819FC1296EE41B006F5C57 /* ThirdDayTableViewCell.swift */,
+				73819FCD296F3210006F5C57 /* DayTableViewCells */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		73819FCD296F3210006F5C57 /* DayTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				73819FC5296EF76F006F5C57 /* FirstTableViewCell.swift */,
+				73819FC7296EF776006F5C57 /* SecondTableViewCell.swift */,
+				73819FC9296EF77C006F5C57 /* ThirdTableViewCell.swift */,
+			);
+			path = DayTableViewCells;
+			sourceTree = "<group>";
+		};
+		73819FCE296F323D006F5C57 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				73D7864F29622440000BAF8C /* ScheduleViewController.swift */,
+				73BF47B7296313B60094975B /* SettingsTableViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		73819FCF296F324B006F5C57 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				73BF47BD296318510094975B /* DayModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		73819FD0296F3256006F5C57 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7392CBB7296C6DB4003EF0AC /* CurrentDateFormatter.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		739F46952938B35700F4B92F = {
 			isa = PBXGroup;
 			children = (
@@ -93,23 +139,17 @@
 			isa = PBXGroup;
 			children = (
 				73D7864829621B2F000BAF8C /* fonts */,
+				73819FD0296F3256006F5C57 /* Extensions */,
+				73819FCF296F324B006F5C57 /* Models */,
+				73819FCE296F323D006F5C57 /* Views */,
+				73819FCB296F2DFD006F5C57 /* TableViewCells */,
 				739F46A12938B35700F4B92F /* AppDelegate.swift */,
 				739F46A32938B35700F4B92F /* SceneDelegate.swift */,
 				739F46A72938B35700F4B92F /* Main.storyboard */,
 				739F46AA2938B35800F4B92F /* Assets.xcassets */,
 				739F46AC2938B35800F4B92F /* LaunchScreen.storyboard */,
 				739F46AF2938B35800F4B92F /* Info.plist */,
-				73D7864F29622440000BAF8C /* ScheduleViewController.swift */,
-				73BF47B7296313B60094975B /* SettingsTableViewController.swift */,
-				73BF47BD296318510094975B /* DayModel.swift */,
-				7392CBB7296C6DB4003EF0AC /* CurrentDateFormatter.swift */,
 				738DE3372964D90D00D6DD9F /* GoogleService-Info.plist */,
-				73819FBD296EE40A006F5C57 /* FIrstDayTableViewCell.swift */,
-				73819FBF296EE414006F5C57 /* SecondDayTableViewCell.swift */,
-				73819FC1296EE41B006F5C57 /* ThirdDayTableViewCell.swift */,
-				73819FC5296EF76F006F5C57 /* FirstTableViewCell.swift */,
-				73819FC7296EF776006F5C57 /* SecondTableViewCell.swift */,
-				73819FC9296EF77C006F5C57 /* ThirdTableViewCell.swift */,
 			);
 			path = schedule_app;
 			sourceTree = "<group>";
