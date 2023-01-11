@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73819FBE296EE40A006F5C57 /* FIrstDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73819FBD296EE40A006F5C57 /* FIrstDayTableViewCell.swift */; };
+		73819FC0296EE414006F5C57 /* SecondDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73819FBF296EE414006F5C57 /* SecondDayTableViewCell.swift */; };
+		73819FC2296EE41B006F5C57 /* ThirdDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73819FC1296EE41B006F5C57 /* ThirdDayTableViewCell.swift */; };
+		73819FC6296EF76F006F5C57 /* FirstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73819FC5296EF76F006F5C57 /* FirstTableViewCell.swift */; };
+		73819FC8296EF776006F5C57 /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73819FC7296EF776006F5C57 /* SecondTableViewCell.swift */; };
+		73819FCA296EF77C006F5C57 /* ThirdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73819FC9296EF77C006F5C57 /* ThirdTableViewCell.swift */; };
 		738DE32E2964D7DE00D6DD9F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 738DE32D2964D7DE00D6DD9F /* FirebaseAnalytics */; };
 		738DE3302964D7DE00D6DD9F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 738DE32F2964D7DE00D6DD9F /* FirebaseAuth */; };
 		738DE3322964D7DE00D6DD9F /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 738DE3312964D7DE00D6DD9F /* FirebaseDatabase */; };
@@ -21,8 +27,6 @@
 		739F46AE2938B35800F4B92F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739F46AC2938B35800F4B92F /* LaunchScreen.storyboard */; };
 		73BF47B8296313B60094975B /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF47B7296313B60094975B /* SettingsTableViewController.swift */; };
 		73BF47BE296318510094975B /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF47BD296318510094975B /* DayModel.swift */; };
-		73BF47C02963186A0094975B /* DayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF47BF2963186A0094975B /* DayTableViewCell.swift */; };
-		73BF47C2296318830094975B /* DayInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF47C1296318830094975B /* DayInfoTableViewCell.swift */; };
 		73D7864C29621BC6000BAF8C /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73D7864929621BC6000BAF8C /* Montserrat-Regular.ttf */; };
 		73D7864D29621BC6000BAF8C /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73D7864A29621BC6000BAF8C /* Montserrat-Bold.ttf */; };
 		73D7864E29621BC6000BAF8C /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73D7864B29621BC6000BAF8C /* Montserrat-SemiBold.ttf */; };
@@ -30,6 +34,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73819FBD296EE40A006F5C57 /* FIrstDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIrstDayTableViewCell.swift; sourceTree = "<group>"; };
+		73819FBF296EE414006F5C57 /* SecondDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDayTableViewCell.swift; sourceTree = "<group>"; };
+		73819FC1296EE41B006F5C57 /* ThirdDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdDayTableViewCell.swift; sourceTree = "<group>"; };
+		73819FC5296EF76F006F5C57 /* FirstTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableViewCell.swift; sourceTree = "<group>"; };
+		73819FC7296EF776006F5C57 /* SecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
+		73819FC9296EF77C006F5C57 /* ThirdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTableViewCell.swift; sourceTree = "<group>"; };
 		738DE3372964D90D00D6DD9F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7392CBB7296C6DB4003EF0AC /* CurrentDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDateFormatter.swift; sourceTree = "<group>"; };
 		739F469E2938B35700F4B92F /* schedule_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = schedule_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,8 +51,6 @@
 		739F46AF2938B35800F4B92F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73BF47B7296313B60094975B /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		73BF47BD296318510094975B /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
-		73BF47BF2963186A0094975B /* DayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTableViewCell.swift; sourceTree = "<group>"; };
-		73BF47C1296318830094975B /* DayInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayInfoTableViewCell.swift; sourceTree = "<group>"; };
 		73D7864929621BC6000BAF8C /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		73D7864A29621BC6000BAF8C /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		73D7864B29621BC6000BAF8C /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -94,10 +102,14 @@
 				73D7864F29622440000BAF8C /* ScheduleViewController.swift */,
 				73BF47B7296313B60094975B /* SettingsTableViewController.swift */,
 				73BF47BD296318510094975B /* DayModel.swift */,
-				73BF47BF2963186A0094975B /* DayTableViewCell.swift */,
-				73BF47C1296318830094975B /* DayInfoTableViewCell.swift */,
 				7392CBB7296C6DB4003EF0AC /* CurrentDateFormatter.swift */,
 				738DE3372964D90D00D6DD9F /* GoogleService-Info.plist */,
+				73819FBD296EE40A006F5C57 /* FIrstDayTableViewCell.swift */,
+				73819FBF296EE414006F5C57 /* SecondDayTableViewCell.swift */,
+				73819FC1296EE41B006F5C57 /* ThirdDayTableViewCell.swift */,
+				73819FC5296EF76F006F5C57 /* FirstTableViewCell.swift */,
+				73819FC7296EF776006F5C57 /* SecondTableViewCell.swift */,
+				73819FC9296EF77C006F5C57 /* ThirdTableViewCell.swift */,
 			);
 			path = schedule_app;
 			sourceTree = "<group>";
@@ -197,12 +209,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73BF47C2296318830094975B /* DayInfoTableViewCell.swift in Sources */,
+				73819FC0296EE414006F5C57 /* SecondDayTableViewCell.swift in Sources */,
 				73BF47B8296313B60094975B /* SettingsTableViewController.swift in Sources */,
 				7392CBB8296C6DB4003EF0AC /* CurrentDateFormatter.swift in Sources */,
-				73BF47C02963186A0094975B /* DayTableViewCell.swift in Sources */,
+				73819FC8296EF776006F5C57 /* SecondTableViewCell.swift in Sources */,
 				73BF47BE296318510094975B /* DayModel.swift in Sources */,
+				73819FBE296EE40A006F5C57 /* FIrstDayTableViewCell.swift in Sources */,
+				73819FCA296EF77C006F5C57 /* ThirdTableViewCell.swift in Sources */,
+				73819FC2296EE41B006F5C57 /* ThirdDayTableViewCell.swift in Sources */,
 				73D7865029622440000BAF8C /* ScheduleViewController.swift in Sources */,
+				73819FC6296EF76F006F5C57 /* FirstTableViewCell.swift in Sources */,
 				739F46A22938B35700F4B92F /* AppDelegate.swift in Sources */,
 				739F46A42938B35700F4B92F /* SceneDelegate.swift in Sources */,
 			);

@@ -6,26 +6,21 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
 
-class ScheduleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+
+class ScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+
     
-  
     @IBOutlet weak var groupLabel: UILabel!
     
     @IBOutlet weak var dayTableView: UITableView!
     
-    var currendDateFormatter = CurrentDateFormatter()
     
-//    var objects = [
-//        DayModel(weekDay: CurrentDateFormatter().setCurrentData(currentDateInt: 0), date: CurrentDateFormatter().setCurrentDataNumber(currentDateInt: 0)),
-//        DayModel(weekDay: CurrentDateFormatter().setCurrentData(currentDateInt: 1), date: CurrentDateFormatter().setCurrentDataNumber(currentDateInt: 1)),
-//        DayModel(weekDay: CurrentDateFormatter().setCurrentData(currentDateInt: 2), date: CurrentDateFormatter().setCurrentDataNumber(currentDateInt: 2))
-//
-//    ]
-    
-    
-    var objects = CurrentDateFormatter().getObject()
+ 
     
     
     override func viewDidLoad() {
@@ -36,74 +31,50 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
         dayTableView.delegate = self
         dayTableView.dataSource = self
         
-   
-      
+        
+        
+        
+        
+        
+        
         
     }
+    
+    
+    
     
     
   
-    
-    
-//    
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//           switch section {
-//           case 0:
-//               return "Monday"
-//           case 1:
-//               return "Tuesday"
-//           case 2:
-//               return "Wednesday"
-//           case 3:
-//               return "Thursday"
-//           case 4:
-//               return "Friday"
-//           default:
-//               return ""
-//           }
-//       }
-//    
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 1
-//    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
+        return 3
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "dayCell", for: indexPath) as! DayTableViewCell
-        let object = objects[indexPath.row]
-        cell.set(object: object)
-        return cell
+        switch indexPath.row {
+        case 0:
+            let cell1 = tableView.dequeueReusableCell(withIdentifier: "firstDayCell", for: indexPath) as! FirstTableViewCell
+            return cell1
+        case 1:
+            let cell2 = tableView.dequeueReusableCell(withIdentifier: "secondDayCell", for: indexPath) as! SecondTableViewCell
+            return cell2
+        case 2:
+            let cell3 = tableView.dequeueReusableCell(withIdentifier: "thirdDayCell", for: indexPath) as! ThirdTableViewCell
+            return cell3
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "defaultCell", for: indexPath)
+            return cell
+        }
+        
+        
     }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-           return 350
-       }
-    
-    
-
-    
-    
-}
-
-
-extension ScheduleViewController {
-    
-    func setCurrentDate(currentDate: String) -> String {
-        let date = Date()
-        
-        let formatterCurrentDay = DateFormatter()
-    
-        formatterCurrentDay.dateFormat = currentDate
-        formatterCurrentDay.locale = Locale(identifier: "en_US")
-        
-        let dayOfWeek = formatterCurrentDay.string(from: date).localizedCapitalized
-        return dayOfWeek
-     
+        return 250
     }
+    
+    
     
 }
 

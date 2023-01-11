@@ -1,31 +1,26 @@
 //
-//  DayInfoTableViewCell.swift
+//  SecondDayTableViewCell.swift
 //  schedule_app
 //
-//  Created by Акжан Калиматов on 02.01.2023.
+//  Created by Акжан Калиматов on 11.01.2023.
 //
 
 import UIKit
 
-class DayInfoTableViewCell: UITableViewCell {
-    
+class SecondDayTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var subjectLabel: UILabel!
-    
-    
-    @IBOutlet weak var tacherLabel: UILabel!
-    
     @IBOutlet weak var placeLabel: UILabel!
     @IBOutlet weak var lessonTypeLabel: UILabel!
-    
     @IBOutlet weak var secondTimeLabel: UILabel!
     @IBOutlet weak var firstTimeLabel: UILabel!
+    @IBOutlet weak var subjectLabel: UILabel!
+    @IBOutlet weak var teacherLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+        // Initialization code
     }
-    
-    
+
+ 
     func set(object: DayInfoModel) {
         for subject in object.subject {
             self.subjectLabel.text = subject
@@ -33,7 +28,7 @@ class DayInfoTableViewCell: UITableViewCell {
 
         }
         for teacher in object.teacher {
-            self.tacherLabel.text = teacher
+            self.teacherLabel.text = teacher
         }
         for place in object.place {
             self.placeLabel.text = place
@@ -51,7 +46,5 @@ class DayInfoTableViewCell: UITableViewCell {
 
         
     }
-    
-
 
 }

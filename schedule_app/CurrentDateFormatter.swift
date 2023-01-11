@@ -65,16 +65,6 @@ class CurrentDateFormatter {
     }
     
     
-    func getObject() -> [DayModel] {
-        var objects = [
-            DayModel(weekDay: setCurrentData(currentDateInt: 0), date: setCurrentDataNumber(currentDateInt: 0)),
-            DayModel(weekDay: setCurrentData(currentDateInt: 1), date: setCurrentDataNumber(currentDateInt: 1)),
-            DayModel(weekDay: setCurrentData(currentDateInt: 2), date: setCurrentDataNumber(currentDateInt: 2))
-            ]
-        
-        
-        return objects
-    }
     
     
 }
