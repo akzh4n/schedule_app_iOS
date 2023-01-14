@@ -80,6 +80,7 @@ class FirstTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDataS
                else {
                   
                    
+                   
                    let data = snapshot!.data()
                    let teacherArray = data!["teacher"] as! [String]
                    let subjectArray = data!["subject"] as! [String]

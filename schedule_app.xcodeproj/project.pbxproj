@@ -27,6 +27,9 @@
 		739F46AE2938B35800F4B92F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739F46AC2938B35800F4B92F /* LaunchScreen.storyboard */; };
 		73BF47B8296313B60094975B /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF47B7296313B60094975B /* SettingsTableViewController.swift */; };
 		73BF47BE296318510094975B /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF47BD296318510094975B /* DayModel.swift */; };
+		73D594A2297320D800574268 /* TeacherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D594A1297320D800574268 /* TeacherTableViewCell.swift */; };
+		73D594A42973211300574268 /* TeacherInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D594A32973211300574268 /* TeacherInfoViewController.swift */; };
+		73D594A6297321BD00574268 /* TeacherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D594A5297321BD00574268 /* TeacherModel.swift */; };
 		73D7864C29621BC6000BAF8C /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73D7864929621BC6000BAF8C /* Montserrat-Regular.ttf */; };
 		73D7864D29621BC6000BAF8C /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73D7864A29621BC6000BAF8C /* Montserrat-Bold.ttf */; };
 		73D7864E29621BC6000BAF8C /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73D7864B29621BC6000BAF8C /* Montserrat-SemiBold.ttf */; };
@@ -51,6 +54,9 @@
 		739F46AF2938B35800F4B92F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73BF47B7296313B60094975B /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		73BF47BD296318510094975B /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		73D594A1297320D800574268 /* TeacherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherTableViewCell.swift; sourceTree = "<group>"; };
+		73D594A32973211300574268 /* TeacherInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherInfoViewController.swift; sourceTree = "<group>"; };
+		73D594A5297321BD00574268 /* TeacherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherModel.swift; sourceTree = "<group>"; };
 		73D7864929621BC6000BAF8C /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		73D7864A29621BC6000BAF8C /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		73D7864B29621BC6000BAF8C /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -73,17 +79,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		73819FCB296F2DFD006F5C57 /* TableViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				73819FBD296EE40A006F5C57 /* FIrstDayTableViewCell.swift */,
-				73819FBF296EE414006F5C57 /* SecondDayTableViewCell.swift */,
-				73819FC1296EE41B006F5C57 /* ThirdDayTableViewCell.swift */,
-				73819FCD296F3210006F5C57 /* DayTableViewCells */,
-			);
-			path = TableViewCells;
-			sourceTree = "<group>";
-		};
 		73819FCD296F3210006F5C57 /* DayTableViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +94,7 @@
 			children = (
 				73D7864F29622440000BAF8C /* ScheduleViewController.swift */,
 				73BF47B7296313B60094975B /* SettingsTableViewController.swift */,
+				73D594A32973211300574268 /* TeacherInfoViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				73BF47BD296318510094975B /* DayModel.swift */,
+				73D594A5297321BD00574268 /* TeacherModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -138,11 +135,12 @@
 		739F46A02938B35700F4B92F /* schedule_app */ = {
 			isa = PBXGroup;
 			children = (
+				73D594A0297320B800574268 /* TeacherTableViewCells */,
 				73D7864829621B2F000BAF8C /* fonts */,
 				73819FD0296F3256006F5C57 /* Extensions */,
 				73819FCF296F324B006F5C57 /* Models */,
+				73D5949F297312A100574268 /* ScheduleTableViewCells */,
 				73819FCE296F323D006F5C57 /* Views */,
-				73819FCB296F2DFD006F5C57 /* TableViewCells */,
 				739F46A12938B35700F4B92F /* AppDelegate.swift */,
 				739F46A32938B35700F4B92F /* SceneDelegate.swift */,
 				739F46A72938B35700F4B92F /* Main.storyboard */,
@@ -152,6 +150,25 @@
 				738DE3372964D90D00D6DD9F /* GoogleService-Info.plist */,
 			);
 			path = schedule_app;
+			sourceTree = "<group>";
+		};
+		73D5949F297312A100574268 /* ScheduleTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				73819FBD296EE40A006F5C57 /* FIrstDayTableViewCell.swift */,
+				73819FBF296EE414006F5C57 /* SecondDayTableViewCell.swift */,
+				73819FC1296EE41B006F5C57 /* ThirdDayTableViewCell.swift */,
+				73819FCD296F3210006F5C57 /* DayTableViewCells */,
+			);
+			path = ScheduleTableViewCells;
+			sourceTree = "<group>";
+		};
+		73D594A0297320B800574268 /* TeacherTableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				73D594A1297320D800574268 /* TeacherTableViewCell.swift */,
+			);
+			path = TeacherTableViewCells;
 			sourceTree = "<group>";
 		};
 		73D7864829621B2F000BAF8C /* fonts */ = {
@@ -249,8 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73D594A6297321BD00574268 /* TeacherModel.swift in Sources */,
 				73819FC0296EE414006F5C57 /* SecondDayTableViewCell.swift in Sources */,
+				73D594A2297320D800574268 /* TeacherTableViewCell.swift in Sources */,
 				73BF47B8296313B60094975B /* SettingsTableViewController.swift in Sources */,
+				73D594A42973211300574268 /* TeacherInfoViewController.swift in Sources */,
 				7392CBB8296C6DB4003EF0AC /* CurrentDateFormatter.swift in Sources */,
 				73819FC8296EF776006F5C57 /* SecondTableViewCell.swift in Sources */,
 				73BF47BE296318510094975B /* DayModel.swift in Sources */,
@@ -411,6 +431,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = schedule_app/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ScheduleApp;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -441,6 +462,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = schedule_app/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ScheduleApp;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
