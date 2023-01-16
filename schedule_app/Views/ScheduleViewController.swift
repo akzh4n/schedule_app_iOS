@@ -11,16 +11,19 @@ import FirebaseStorage
 
 
 
-class ScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+class ScheduleViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+  
 
+    
+    
+    
     
     @IBOutlet weak var groupLabel: UILabel!
     
     @IBOutlet weak var dayTableView: UITableView!
     
     
- 
+    
     
     
     override func viewDidLoad() {
@@ -32,25 +35,20 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         dayTableView.dataSource = self
         
         
-        
-        
-        
-        
-        
-        
+
     }
     
     
+
+
     
-    
-    
-  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         switch indexPath.row {
         case 0:
             let cell1 = tableView.dequeueReusableCell(withIdentifier: "firstDayCell", for: indexPath) as! FirstTableViewCell
@@ -69,10 +67,16 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
+
+    
+    
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
     }
+    
+    
     
     
     

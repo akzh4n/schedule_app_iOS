@@ -86,7 +86,7 @@ class ThirdTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDataS
                    let secondTimeArray = data!["endTime"] as! [String]
                    
                    for i in 0..<teacherArray.count {
-                       let scheduleItem = DayInfoModel(teacher: [teacherArray[i]], subject: [subjectArray[i]], place: [placeArray[i]], lessonType: [lessonTypeArray[i]], firstTime: [firstTimeArray[i]], secondTime: [secondTimeArray[i]])
+                       let scheduleItem = DayInfoModel(teacher: teacherArray[i], subject: subjectArray[i], place: placeArray[i], lessonType: lessonTypeArray[i], firstTime: firstTimeArray[i], secondTime: secondTimeArray[i])
                        self.thirdDayInfoObjects.append(scheduleItem)
 
                    }

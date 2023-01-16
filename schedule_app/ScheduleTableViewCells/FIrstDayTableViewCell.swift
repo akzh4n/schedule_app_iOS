@@ -25,35 +25,28 @@ class FIrstDayTableViewCell: UITableViewCell {
 
     
     func set(object: DayInfoModel) {
-        for subject in object.subject {
-            self.subjectLabel.text = subject
-        }
-        for teacher in object.teacher {
-            self.teacherLabel.text = teacher
-        }
-        for place in object.place {
-            self.placeLabel.text = place
-        }
-        for lesson in object.lessonType {
-            self.lessonTypeLabel.text = lesson
-            self.setColorToView()
-        }
-        for firstTime in object.firstTime {
-            self.firstTimeLabel.text = firstTime
-        }
-        for secondTime in object.secondTime {
-            self.secondTimeLabel.text = secondTime
-        }
-    
+        self.subjectLabel.text = object.subject
+        
+        self.teacherLabel.text = object.teacher
+        
+        self.placeLabel.text = object.place
+        
+        self.lessonTypeLabel.text = object.lessonType
+        self.setColorToView()
+        
+        self.firstTimeLabel.text = object.firstTime
+        
+        self.secondTimeLabel.text = object.secondTime
         
     }
     
     func setColorToView() {
         if lessonTypeLabel.text == "Lecture" {
-            lineView.backgroundColor = .blue
+            lineView.backgroundColor = .systemBlue
         } else if lessonTypeLabel.text == "Practice"{
             lineView.backgroundColor = .systemGreen
         }
     }
 
 }
+

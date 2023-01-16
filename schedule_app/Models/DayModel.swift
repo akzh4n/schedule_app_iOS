@@ -11,12 +11,12 @@ import UIKit
 
 
 struct DayInfoModel {
-    var teacher: [String]
-    var subject: [String]
-    var place: [String]
-    var lessonType: [String]
-    var firstTime: [String]
-    var secondTime: [String]
+    var teacher: String
+    var subject: String
+    var place: String
+    var lessonType: String
+    var firstTime: String
+    var secondTime: String
     
     
 }

@@ -43,11 +43,11 @@
             </objects>
             <point key="canvasLocation" x="4080" y="381"/>
         </scene>
-        <!--Расписание-->
+        <!--Schedule-->
         <scene sceneID="R7R-4h-6to">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="Exf-ZY-jAf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="Расписание" image="calendar" catalog="system" id="pGt-ib-l69">
+                    <tabBarItem key="tabBarItem" tag="1" title="Schedule" image="calendar" catalog="system" id="pGt-ib-l69">
                         <inset key="imageInsets" minX="3" minY="-4" maxX="-1" maxY="0.0"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZRh-F9-BCN">
@@ -543,11 +543,11 @@
         <scene sceneID="fKM-Bb-Xsq">
             <objects>
                 <viewController storyboardIdentifier="TeacherInfoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HXh-NP-oA6" customClass="TeacherInfoViewController" customModule="schedule_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DaH-xr-NwX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="DaH-xr-NwX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CKI-Jh-W2W">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CKI-Jh-W2W">
                                 <rect key="frame" x="0.0" y="93" width="375" height="685"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="gWu-gn-Gsj">
@@ -592,7 +592,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9ZU-RR-CnK">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9ZU-RR-CnK">
                                         <rect key="frame" x="0.0" y="355" width="375" height="330"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work Experience" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2M-Gz-e4x">
@@ -606,7 +606,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZKT-bw-IrB">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZKT-bw-IrB">
                                                 <rect key="frame" x="0.0" y="50" width="375" height="280"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -719,16 +719,15 @@
                     <nil key="highlightedColor"/>
                 </label>
             </objects>
-            <point key="canvasLocation" x="7668" y="-67.241379310344826"/>
+            <point key="canvasLocation" x="7465" y="850"/>
         </scene>
-        <!--Настройки-->
+        <!--Staff-->
         <scene sceneID="dLA-xu-uSS">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="xLI-jF-O6q" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Настройки" image="gearshape" catalog="system" id="yFG-RY-bDl">
+                    <tabBarItem key="tabBarItem" title="Staff" image="person.2.fill" catalog="system" id="yFG-RY-bDl">
                         <inset key="imageInsets" minX="-1" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
-                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iJL-ve-EbL">
                         <rect key="frame" x="0.0" y="47" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -741,22 +740,42 @@
             </objects>
             <point key="canvasLocation" x="5883" y="850"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Teachers-->
         <scene sceneID="AT7-Vu-2YM">
             <objects>
-                <tableViewController id="x2P-uL-0T8" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TeacherListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x2P-uL-0T8" customClass="TeachersListTableViewController" customModule="schedule_app" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="tUq-Tt-ONL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qmZ-dO-egF">
-                                <rect key="frame" x="0.0" y="50" width="375" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="teacherListCell" rowHeight="50" id="qmZ-dO-egF" customClass="TeacherListTableViewCell" customModule="schedule_app" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qmZ-dO-egF" id="5Oi-OZ-6Gw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Askar Zhussupov" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jz-4d-MKb">
+                                            <rect key="frame" x="20" y="15" width="335" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="335" id="65j-0B-hMN"/>
+                                                <constraint firstAttribute="height" constant="25" id="o5T-sc-0wN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0jz-4d-MKb" firstAttribute="top" secondItem="5Oi-OZ-6Gw" secondAttribute="top" constant="15" id="0JW-sE-Vg2"/>
+                                        <constraint firstItem="0jz-4d-MKb" firstAttribute="leading" secondItem="5Oi-OZ-6Gw" secondAttribute="leading" constant="20" symbolic="YES" id="HY9-MT-zsS"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="fullNameLabel" destination="0jz-4d-MKb" id="Psz-js-Kop"/>
+                                    <segue destination="HXh-NP-oA6" kind="presentation" identifier="teacherInfoView" id="fHg-xt-LBq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -764,16 +783,18 @@
                             <outlet property="delegate" destination="x2P-uL-0T8" id="scP-B3-xoy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Iuz-SP-b3k"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Teachers" id="Iuz-SP-b3k"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ww6-y5-Svl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6722" y="850"/>
+            <point key="canvasLocation" x="6720.8000000000002" y="849.7536945812808"/>
         </scene>
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="128" height="107"/>
-        <image name="gearshape" catalog="system" width="128" height="123"/>
+        <image name="person.2.fill" catalog="system" width="128" height="81"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

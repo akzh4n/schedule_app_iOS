@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		733B25192975067600625839 /* TeachersListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B25182975067600625839 /* TeachersListTableViewController.swift */; };
+		733B251B2975081D00625839 /* TeacherListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B251A2975081D00625839 /* TeacherListModel.swift */; };
+		733B251D2975085000625839 /* TeacherListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B251C2975085000625839 /* TeacherListTableViewCell.swift */; };
 		73819FBE296EE40A006F5C57 /* FIrstDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73819FBD296EE40A006F5C57 /* FIrstDayTableViewCell.swift */; };
 		73819FC0296EE414006F5C57 /* SecondDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73819FBF296EE414006F5C57 /* SecondDayTableViewCell.swift */; };
 		73819FC2296EE41B006F5C57 /* ThirdDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73819FC1296EE41B006F5C57 /* ThirdDayTableViewCell.swift */; };
@@ -25,7 +28,6 @@
 		739F46A92938B35700F4B92F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739F46A72938B35700F4B92F /* Main.storyboard */; };
 		739F46AB2938B35800F4B92F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739F46AA2938B35800F4B92F /* Assets.xcassets */; };
 		739F46AE2938B35800F4B92F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739F46AC2938B35800F4B92F /* LaunchScreen.storyboard */; };
-		73BF47B8296313B60094975B /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF47B7296313B60094975B /* SettingsTableViewController.swift */; };
 		73BF47BE296318510094975B /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BF47BD296318510094975B /* DayModel.swift */; };
 		73D594A2297320D800574268 /* TeacherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D594A1297320D800574268 /* TeacherTableViewCell.swift */; };
 		73D594A42973211300574268 /* TeacherInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D594A32973211300574268 /* TeacherInfoViewController.swift */; };
@@ -37,6 +39,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		733B25182975067600625839 /* TeachersListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersListTableViewController.swift; sourceTree = "<group>"; };
+		733B251A2975081D00625839 /* TeacherListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherListModel.swift; sourceTree = "<group>"; };
+		733B251C2975085000625839 /* TeacherListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherListTableViewCell.swift; sourceTree = "<group>"; };
 		73819FBD296EE40A006F5C57 /* FIrstDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIrstDayTableViewCell.swift; sourceTree = "<group>"; };
 		73819FBF296EE414006F5C57 /* SecondDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDayTableViewCell.swift; sourceTree = "<group>"; };
 		73819FC1296EE41B006F5C57 /* ThirdDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdDayTableViewCell.swift; sourceTree = "<group>"; };
@@ -52,7 +57,6 @@
 		739F46AA2938B35800F4B92F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		739F46AD2938B35800F4B92F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		739F46AF2938B35800F4B92F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		73BF47B7296313B60094975B /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		73BF47BD296318510094975B /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
 		73D594A1297320D800574268 /* TeacherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherTableViewCell.swift; sourceTree = "<group>"; };
 		73D594A32973211300574268 /* TeacherInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherInfoViewController.swift; sourceTree = "<group>"; };
@@ -93,8 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				73D7864F29622440000BAF8C /* ScheduleViewController.swift */,
-				73BF47B7296313B60094975B /* SettingsTableViewController.swift */,
 				73D594A32973211300574268 /* TeacherInfoViewController.swift */,
+				733B25182975067600625839 /* TeachersListTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -104,6 +108,7 @@
 			children = (
 				73BF47BD296318510094975B /* DayModel.swift */,
 				73D594A5297321BD00574268 /* TeacherModel.swift */,
+				733B251A2975081D00625839 /* TeacherListModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				73D594A1297320D800574268 /* TeacherTableViewCell.swift */,
+				733B251C2975085000625839 /* TeacherListTableViewCell.swift */,
 			);
 			path = TeacherTableViewCells;
 			sourceTree = "<group>";
@@ -268,8 +274,8 @@
 			files = (
 				73D594A6297321BD00574268 /* TeacherModel.swift in Sources */,
 				73819FC0296EE414006F5C57 /* SecondDayTableViewCell.swift in Sources */,
+				733B251D2975085000625839 /* TeacherListTableViewCell.swift in Sources */,
 				73D594A2297320D800574268 /* TeacherTableViewCell.swift in Sources */,
-				73BF47B8296313B60094975B /* SettingsTableViewController.swift in Sources */,
 				73D594A42973211300574268 /* TeacherInfoViewController.swift in Sources */,
 				7392CBB8296C6DB4003EF0AC /* CurrentDateFormatter.swift in Sources */,
 				73819FC8296EF776006F5C57 /* SecondTableViewCell.swift in Sources */,
@@ -277,9 +283,11 @@
 				73819FBE296EE40A006F5C57 /* FIrstDayTableViewCell.swift in Sources */,
 				73819FCA296EF77C006F5C57 /* ThirdTableViewCell.swift in Sources */,
 				73819FC2296EE41B006F5C57 /* ThirdDayTableViewCell.swift in Sources */,
+				733B251B2975081D00625839 /* TeacherListModel.swift in Sources */,
 				73D7865029622440000BAF8C /* ScheduleViewController.swift in Sources */,
 				73819FC6296EF76F006F5C57 /* FirstTableViewCell.swift in Sources */,
 				739F46A22938B35700F4B92F /* AppDelegate.swift in Sources */,
+				733B25192975067600625839 /* TeachersListTableViewController.swift in Sources */,
 				739F46A42938B35700F4B92F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

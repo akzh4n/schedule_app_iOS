@@ -16,6 +16,7 @@ class TeacherInfoViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     var db = Firestore.firestore()
+    var teacherName: String?
     var teacherInfoTableObjects = [TeacherTableInfoModel]()
 
     @IBOutlet weak var nameLabel: UILabel!
@@ -28,8 +29,12 @@ class TeacherInfoViewController: UIViewController, UITableViewDelegate, UITableV
         
         teacherInfoTableView.delegate = self
         teacherInfoTableView.dataSource = self
-        self.fetchTeacherData(teacherName: "Zhanarstanova Maral")
+      
+        self.nameLabel.text = teacherName
+        self.fetchTeacherData(teacherName: nameLabel.text!)
     }
+    
+    
     
     func fetchTeacherData(teacherName: String) {
            db.collection("Teachers").document(teacherName).getDocument { [self] snapshot, error in
