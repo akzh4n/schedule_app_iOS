@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import FirebaseFirestore
 
 
 class FirstTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource {
@@ -16,14 +17,14 @@ class FirstTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDataS
     
     
     let db = Firestore.firestore()
-    
+    var groupValue: String?
     
     @IBOutlet weak var firstDayInfoTableView: UITableView!
     
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var weekDayLabel: UILabel!
-    
+//    var receivedData: String?
     
     var currentDay = CurrentDateFormatter().setCurrentData(currentDateInt: 0)
     var firstDayInfoObjects = [DayInfoModel]()
@@ -42,21 +43,37 @@ class FirstTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDataS
         dateLabel.text = CurrentDateFormatter().setCurrentDataNumber(currentDateInt: 0)
         
         
-        self.dayExceptions()
-        
+        self.fetchAllData()
     }
     
     
     
-    func dayExceptions() {
-        if currentDay == "Saturday" {
-            self.loadErrorLabel()
-        } else if currentDay == "Sunday" {
-            self.loadErrorLabel()
-        } else {
-            fetchData(dayWeek: currentDay)
+  
+    
+    func fetchAllData() {
+        let userID = Auth.auth().currentUser?.uid
+        if userID != nil {
+            db.collection("Users").document(userID!).getDocument { [self] snapshot, error in
+                if error != nil {
+                    print("Error")
+                }
+                else {
+                    let data = snapshot!.data()
+                    let groupData = data!["group"] as! String
+                    self.groupValue = groupData
+                    
+                    if currentDay == "Saturday" {
+                        self.loadErrorLabel()
+                    } else if currentDay == "Sunday" {
+                        self.loadErrorLabel()
+                    } else {
+                        fetchData(groupValue: groupValue!, dayWeek: currentDay)
+                    }
+                }
+                
+            }
+            
         }
-        
     }
     
     
@@ -82,8 +99,8 @@ class FirstTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDataS
     
     
     
-    func fetchData(dayWeek: String) {
-        db.collection("SE-2109").document(dayWeek).getDocument { [self] snapshot, error in
+    func fetchData(groupValue: String, dayWeek: String) {
+        db.collection(groupValue).document(dayWeek).getDocument { [self] snapshot, error in
             if error != nil {
                 print("Error")
             }
@@ -140,27 +157,7 @@ class FirstTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDataS
     }
     
     
-    
-    
-    
-
-//
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            if segue.identifier == "teacherInfo" {
-//                let teacherInfoVC = segue.destination as! TeacherInfoViewController
-//                let cell = sender as! FirstTableViewCell
-//                let teachersArray = cell.firstDayInfoObjects.map({$0.teacher})
-//                print(teachersArray)
-//                teacherInfoVC.teacherName = teachersArray[0]
-//
-//            }
-//        }
-//
-//
-//    }
-//
-    
+ 
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60

@@ -8,17 +8,20 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import FirebaseFirestore
+
+
 class ThirdTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource {
    
     
 
     let db = Firestore.firestore()
-    
-    
+    var groupValue: String?
     
     @IBOutlet weak var thirdDayInfoTableView: UITableView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var weekDayLabel: UILabel!
+
     
     var currentDay = CurrentDateFormatter().setCurrentData(currentDateInt: 2)
     var thirdDayInfoObjects = [DayInfoModel]()
@@ -31,20 +34,34 @@ class ThirdTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDataS
         weekDayLabel.text = CurrentDateFormatter().setCurrentData(currentDateInt: 2)
         dateLabel.text = CurrentDateFormatter().setCurrentDataNumber(currentDateInt: 2)
         
-        self.dayExceptions()
+        self.fetchAllData()
         
     }
     
-    
-    func dayExceptions() {
-        if currentDay == "Saturday" {
-            self.loadErrorLabel()
-        } else if currentDay == "Sunday" {
-            self.loadErrorLabel()
-        } else {
-            fetchData(dayWeek: currentDay)
+    func fetchAllData() {
+        let userID = Auth.auth().currentUser?.uid
+        if userID != nil {
+            db.collection("Users").document(userID!).getDocument { [self] snapshot, error in
+                if error != nil {
+                    print("Error")
+                }
+                else {
+                    let data = snapshot!.data()
+                    let groupData = data!["group"] as! String
+                    self.groupValue = groupData
+                    
+                    if currentDay == "Saturday" {
+                        self.loadErrorLabel()
+                    } else if currentDay == "Sunday" {
+                        self.loadErrorLabel()
+                    } else {
+                        fetchData(groupValue: groupValue!, dayWeek: currentDay)
+                    }
+                }
+                
+            }
+            
         }
-        
     }
     
     
@@ -68,9 +85,9 @@ class ThirdTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDataS
         ])
     }
     
-    func fetchData(dayWeek: String) {
+    func fetchData(groupValue: String, dayWeek: String) {
         
-           db.collection("SE-2109").document(dayWeek).getDocument { [self] snapshot, error in
+           db.collection(groupValue).document(dayWeek).getDocument { [self] snapshot, error in
                if error != nil {
                    print("Error")
                }

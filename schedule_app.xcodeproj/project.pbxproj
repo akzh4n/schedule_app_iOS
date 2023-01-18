@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		730098B129780193009FC21E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730098B029780193009FC21E /* MainViewController.swift */; };
+		730098B3297801A2009FC21E /* ChooseGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730098B2297801A2009FC21E /* ChooseGroupViewController.swift */; };
+		730098B5297802CB009FC21E /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730098B4297802CB009FC21E /* HomeTabBarController.swift */; };
+		730730A429772EE6000E7191 /* Localize_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 730730A329772EE6000E7191 /* Localize_Swift */; };
+		73263F6229786E5B00F21B82 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73263F6129786E5B00F21B82 /* AlertExtension.swift */; };
+		73263F64297887B300F21B82 /* UIResponder+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73263F63297887B300F21B82 /* UIResponder+Utils.swift */; };
+		73263F662978885C00F21B82 /* UsserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73263F652978885C00F21B82 /* UsserDefaults+Extension.swift */; };
+		73263F682978A9C800F21B82 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73263F672978A9C800F21B82 /* OnboardingViewController.swift */; };
 		733B25192975067600625839 /* TeachersListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B25182975067600625839 /* TeachersListTableViewController.swift */; };
 		733B251B2975081D00625839 /* TeacherListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B251A2975081D00625839 /* TeacherListModel.swift */; };
 		733B251D2975085000625839 /* TeacherListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B251C2975085000625839 /* TeacherListTableViewCell.swift */; };
+		737476BE29773ABD00DF9163 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737476BD29773ABD00DF9163 /* SettingsViewController.swift */; };
 		73819FBE296EE40A006F5C57 /* FIrstDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73819FBD296EE40A006F5C57 /* FIrstDayTableViewCell.swift */; };
 		73819FC0296EE414006F5C57 /* SecondDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73819FBF296EE414006F5C57 /* SecondDayTableViewCell.swift */; };
 		73819FC2296EE41B006F5C57 /* ThirdDayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73819FC1296EE41B006F5C57 /* ThirdDayTableViewCell.swift */; };
@@ -39,9 +48,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		730098B029780193009FC21E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		730098B2297801A2009FC21E /* ChooseGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseGroupViewController.swift; sourceTree = "<group>"; };
+		730098B4297802CB009FC21E /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		73263F6129786E5B00F21B82 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
+		73263F63297887B300F21B82 /* UIResponder+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Utils.swift"; sourceTree = "<group>"; };
+		73263F652978885C00F21B82 /* UsserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		73263F672978A9C800F21B82 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		733B25182975067600625839 /* TeachersListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersListTableViewController.swift; sourceTree = "<group>"; };
 		733B251A2975081D00625839 /* TeacherListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherListModel.swift; sourceTree = "<group>"; };
 		733B251C2975085000625839 /* TeacherListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherListTableViewCell.swift; sourceTree = "<group>"; };
+		737476BD29773ABD00DF9163 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		73819FBD296EE40A006F5C57 /* FIrstDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIrstDayTableViewCell.swift; sourceTree = "<group>"; };
 		73819FBF296EE414006F5C57 /* SecondDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDayTableViewCell.swift; sourceTree = "<group>"; };
 		73819FC1296EE41B006F5C57 /* ThirdDayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdDayTableViewCell.swift; sourceTree = "<group>"; };
@@ -75,6 +92,7 @@
 				738DE3322964D7DE00D6DD9F /* FirebaseDatabase in Frameworks */,
 				738DE3342964D7DE00D6DD9F /* FirebaseFirestore in Frameworks */,
 				738DE32E2964D7DE00D6DD9F /* FirebaseAnalytics in Frameworks */,
+				730730A429772EE6000E7191 /* Localize_Swift in Frameworks */,
 				738DE3362964D7DE00D6DD9F /* FirebaseStorage in Frameworks */,
 				738DE3302964D7DE00D6DD9F /* FirebaseAuth in Frameworks */,
 			);
@@ -99,6 +117,11 @@
 				73D7864F29622440000BAF8C /* ScheduleViewController.swift */,
 				73D594A32973211300574268 /* TeacherInfoViewController.swift */,
 				733B25182975067600625839 /* TeachersListTableViewController.swift */,
+				737476BD29773ABD00DF9163 /* SettingsViewController.swift */,
+				730098B029780193009FC21E /* MainViewController.swift */,
+				730098B2297801A2009FC21E /* ChooseGroupViewController.swift */,
+				730098B4297802CB009FC21E /* HomeTabBarController.swift */,
+				73263F672978A9C800F21B82 /* OnboardingViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +140,9 @@
 			isa = PBXGroup;
 			children = (
 				7392CBB7296C6DB4003EF0AC /* CurrentDateFormatter.swift */,
+				73263F6129786E5B00F21B82 /* AlertExtension.swift */,
+				73263F63297887B300F21B82 /* UIResponder+Utils.swift */,
+				73263F652978885C00F21B82 /* UsserDefaults+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -209,6 +235,7 @@
 				738DE3312964D7DE00D6DD9F /* FirebaseDatabase */,
 				738DE3332964D7DE00D6DD9F /* FirebaseFirestore */,
 				738DE3352964D7DE00D6DD9F /* FirebaseStorage */,
+				730730A329772EE6000E7191 /* Localize_Swift */,
 			);
 			productName = schedule_app;
 			productReference = 739F469E2938B35700F4B92F /* schedule_app.app */;
@@ -240,6 +267,7 @@
 			mainGroup = 739F46952938B35700F4B92F;
 			packageReferences = (
 				738DE32C2964D7DE00D6DD9F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				730730A229772EE5000E7191 /* XCRemoteSwiftPackageReference "Localize-Swift" */,
 			);
 			productRefGroup = 739F469F2938B35700F4B92F /* Products */;
 			projectDirPath = "";
@@ -274,21 +302,29 @@
 			files = (
 				73D594A6297321BD00574268 /* TeacherModel.swift in Sources */,
 				73819FC0296EE414006F5C57 /* SecondDayTableViewCell.swift in Sources */,
+				730098B5297802CB009FC21E /* HomeTabBarController.swift in Sources */,
 				733B251D2975085000625839 /* TeacherListTableViewCell.swift in Sources */,
+				73263F64297887B300F21B82 /* UIResponder+Utils.swift in Sources */,
+				730098B3297801A2009FC21E /* ChooseGroupViewController.swift in Sources */,
 				73D594A2297320D800574268 /* TeacherTableViewCell.swift in Sources */,
 				73D594A42973211300574268 /* TeacherInfoViewController.swift in Sources */,
+				730098B129780193009FC21E /* MainViewController.swift in Sources */,
 				7392CBB8296C6DB4003EF0AC /* CurrentDateFormatter.swift in Sources */,
 				73819FC8296EF776006F5C57 /* SecondTableViewCell.swift in Sources */,
 				73BF47BE296318510094975B /* DayModel.swift in Sources */,
+				73263F682978A9C800F21B82 /* OnboardingViewController.swift in Sources */,
 				73819FBE296EE40A006F5C57 /* FIrstDayTableViewCell.swift in Sources */,
 				73819FCA296EF77C006F5C57 /* ThirdTableViewCell.swift in Sources */,
 				73819FC2296EE41B006F5C57 /* ThirdDayTableViewCell.swift in Sources */,
 				733B251B2975081D00625839 /* TeacherListModel.swift in Sources */,
 				73D7865029622440000BAF8C /* ScheduleViewController.swift in Sources */,
+				73263F6229786E5B00F21B82 /* AlertExtension.swift in Sources */,
+				73263F662978885C00F21B82 /* UsserDefaults+Extension.swift in Sources */,
 				73819FC6296EF76F006F5C57 /* FirstTableViewCell.swift in Sources */,
 				739F46A22938B35700F4B92F /* AppDelegate.swift in Sources */,
 				733B25192975067600625839 /* TeachersListTableViewController.swift in Sources */,
 				739F46A42938B35700F4B92F /* SceneDelegate.swift in Sources */,
+				737476BE29773ABD00DF9163 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -378,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -514,6 +552,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		730730A229772EE5000E7191 /* XCRemoteSwiftPackageReference "Localize-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Localize-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		738DE32C2964D7DE00D6DD9F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -525,6 +571,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		730730A329772EE6000E7191 /* Localize_Swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 730730A229772EE5000E7191 /* XCRemoteSwiftPackageReference "Localize-Swift" */;
+			productName = Localize_Swift;
+		};
 		738DE32D2964D7DE00D6DD9F /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 738DE32C2964D7DE00D6DD9F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

@@ -8,19 +8,19 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import FirebaseFirestore
 
 class SecondTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource {
- 
     
-
+    
+    
     let db = Firestore.firestore()
-    
-    
+    var groupValue: String?
     
     @IBOutlet weak var secondDayInfoTableView: UITableView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var weekDayLabel: UILabel!
-    
+ 
     
     
     var currentDay = CurrentDateFormatter().setCurrentData(currentDateInt: 1)
@@ -35,20 +35,36 @@ class SecondTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewData
         weekDayLabel.text = CurrentDateFormatter().setCurrentData(currentDateInt: 1)
         dateLabel.text = CurrentDateFormatter().setCurrentDataNumber(currentDateInt: 1)
         
-        self.dayExceptions() 
+        self.fetchAllData()
         
     }
     
     
-    func dayExceptions() {
-        if currentDay == "Saturday" {
-            self.loadErrorLabel()
-        } else if currentDay == "Sunday" {
-            self.loadErrorLabel()
-        } else {
-            fetchData(dayWeek: currentDay)
+    
+    func fetchAllData() {
+        let userID = Auth.auth().currentUser?.uid
+        if userID != nil {
+            db.collection("Users").document(userID!).getDocument { [self] snapshot, error in
+                if error != nil {
+                    print("Error")
+                }
+                else {
+                    let data = snapshot!.data()
+                    let groupData = data!["group"] as! String
+                    self.groupValue = groupData
+                    
+                    if currentDay == "Saturday" {
+                        self.loadErrorLabel()
+                    } else if currentDay == "Sunday" {
+                        self.loadErrorLabel()
+                    } else {
+                        fetchData(groupValue: groupValue!, dayWeek: currentDay)
+                    }
+                }
+                
+            }
+            
         }
-        
     }
     
     
@@ -73,35 +89,35 @@ class SecondTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewData
     }
     
     
-    func fetchData(dayWeek: String) {
-           db.collection("SE-2109").document(dayWeek).getDocument { [self] snapshot, error in
-               if error != nil {
-                   print("Error")
-               }
-               else {
-                  
-                   
-                   let data = snapshot!.data()
-                   let teacherArray = data!["teacher"] as! [String]
-                   let subjectArray = data!["subject"] as! [String]
-                   let placeArray = data!["place"] as! [String]
-                   let lessonTypeArray = data!["type"] as! [String]
-                   let firstTimeArray = data!["startTime"] as! [String]
-                   let secondTimeArray = data!["endTime"] as! [String]
-                   
-                   for i in 0..<teacherArray.count {
-                       let scheduleItem = DayInfoModel(teacher: teacherArray[i], subject: subjectArray[i], place: placeArray[i], lessonType: lessonTypeArray[i], firstTime: firstTimeArray[i], secondTime: secondTimeArray[i])
-                       self.secondDayInfoObjects.append(scheduleItem)
-
-                   }
-                   
-                   
-                 
-                   secondDayInfoTableView.updateConstraints()
-                   secondDayInfoTableView.reloadData()
-               }
-           }
-       }
+    func fetchData(groupValue: String, dayWeek: String) {
+        db.collection(groupValue).document(dayWeek).getDocument { [self] snapshot, error in
+            if error != nil {
+                print("Error")
+            }
+            else {
+                
+                
+                let data = snapshot!.data()
+                let teacherArray = data!["teacher"] as! [String]
+                let subjectArray = data!["subject"] as! [String]
+                let placeArray = data!["place"] as! [String]
+                let lessonTypeArray = data!["type"] as! [String]
+                let firstTimeArray = data!["startTime"] as! [String]
+                let secondTimeArray = data!["endTime"] as! [String]
+                
+                for i in 0..<teacherArray.count {
+                    let scheduleItem = DayInfoModel(teacher: teacherArray[i], subject: subjectArray[i], place: placeArray[i], lessonType: lessonTypeArray[i], firstTime: firstTimeArray[i], secondTime: secondTimeArray[i])
+                    self.secondDayInfoObjects.append(scheduleItem)
+                    
+                }
+                
+                
+                
+                secondDayInfoTableView.updateConstraints()
+                secondDayInfoTableView.reloadData()
+            }
+        }
+    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -111,7 +127,7 @@ class SecondTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "secondDayInfoCell", for: indexPath) as! SecondDayTableViewCell
         let object = secondDayInfoObjects[indexPath.row]
-    
+        
         cell.set(object: object)
         
         return cell
@@ -119,7 +135,7 @@ class SecondTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
-
     
-
+    
+    
 }

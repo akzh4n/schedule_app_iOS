@@ -13,6 +13,9 @@ import FirebaseFirestore
 
 
 class TeachersListTableViewController: UITableViewController {
+    
+    
+    
     var searchController: UISearchController!
     var filteredData = [TeacherList]()
     let db = Firestore.firestore()
