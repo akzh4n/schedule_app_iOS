@@ -15,6 +15,8 @@
 		73263F64297887B300F21B82 /* UIResponder+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73263F63297887B300F21B82 /* UIResponder+Utils.swift */; };
 		73263F662978885C00F21B82 /* UsserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73263F652978885C00F21B82 /* UsserDefaults+Extension.swift */; };
 		73263F682978A9C800F21B82 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73263F672978A9C800F21B82 /* OnboardingViewController.swift */; };
+		73263F6B2978AA6000F21B82 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73263F6A2978AA6000F21B82 /* OnboardingCollectionViewCell.swift */; };
+		73263F6D2978AA9800F21B82 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73263F6C2978AA9800F21B82 /* OnboardingSlide.swift */; };
 		733B25192975067600625839 /* TeachersListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B25182975067600625839 /* TeachersListTableViewController.swift */; };
 		733B251B2975081D00625839 /* TeacherListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B251A2975081D00625839 /* TeacherListModel.swift */; };
 		733B251D2975085000625839 /* TeacherListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733B251C2975085000625839 /* TeacherListTableViewCell.swift */; };
@@ -55,6 +57,8 @@
 		73263F63297887B300F21B82 /* UIResponder+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Utils.swift"; sourceTree = "<group>"; };
 		73263F652978885C00F21B82 /* UsserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		73263F672978A9C800F21B82 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		73263F6A2978AA6000F21B82 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
+		73263F6C2978AA9800F21B82 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		733B25182975067600625839 /* TeachersListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersListTableViewController.swift; sourceTree = "<group>"; };
 		733B251A2975081D00625839 /* TeacherListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherListModel.swift; sourceTree = "<group>"; };
 		733B251C2975085000625839 /* TeacherListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherListTableViewCell.swift; sourceTree = "<group>"; };
@@ -101,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73263F692978AA2800F21B82 /* OnboardingView */ = {
+			isa = PBXGroup;
+			children = (
+				73263F672978A9C800F21B82 /* OnboardingViewController.swift */,
+				73263F6A2978AA6000F21B82 /* OnboardingCollectionViewCell.swift */,
+			);
+			path = OnboardingView;
+			sourceTree = "<group>";
+		};
 		73819FCD296F3210006F5C57 /* DayTableViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +134,6 @@
 				730098B029780193009FC21E /* MainViewController.swift */,
 				730098B2297801A2009FC21E /* ChooseGroupViewController.swift */,
 				730098B4297802CB009FC21E /* HomeTabBarController.swift */,
-				73263F672978A9C800F21B82 /* OnboardingViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,6 +144,7 @@
 				73BF47BD296318510094975B /* DayModel.swift */,
 				73D594A5297321BD00574268 /* TeacherModel.swift */,
 				733B251A2975081D00625839 /* TeacherListModel.swift */,
+				73263F6C2978AA9800F21B82 /* OnboardingSlide.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -166,6 +179,7 @@
 		739F46A02938B35700F4B92F /* schedule_app */ = {
 			isa = PBXGroup;
 			children = (
+				73263F692978AA2800F21B82 /* OnboardingView */,
 				73D594A0297320B800574268 /* TeacherTableViewCells */,
 				73D7864829621B2F000BAF8C /* fonts */,
 				73819FD0296F3256006F5C57 /* Extensions */,
@@ -313,6 +327,7 @@
 				73819FC8296EF776006F5C57 /* SecondTableViewCell.swift in Sources */,
 				73BF47BE296318510094975B /* DayModel.swift in Sources */,
 				73263F682978A9C800F21B82 /* OnboardingViewController.swift in Sources */,
+				73263F6B2978AA6000F21B82 /* OnboardingCollectionViewCell.swift in Sources */,
 				73819FBE296EE40A006F5C57 /* FIrstDayTableViewCell.swift in Sources */,
 				73819FCA296EF77C006F5C57 /* ThirdTableViewCell.swift in Sources */,
 				73819FC2296EE41B006F5C57 /* ThirdDayTableViewCell.swift in Sources */,
@@ -324,6 +339,7 @@
 				739F46A22938B35700F4B92F /* AppDelegate.swift in Sources */,
 				733B25192975067600625839 /* TeachersListTableViewController.swift in Sources */,
 				739F46A42938B35700F4B92F /* SceneDelegate.swift in Sources */,
+				73263F6D2978AA9800F21B82 /* OnboardingSlide.swift in Sources */,
 				737476BE29773ABD00DF9163 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,7 +492,8 @@
 				DEVELOPMENT_TEAM = 32TDRHHMUS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = schedule_app/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ScheduleApp;
+				INFOPLIST_KEY_CFBundleDisplayName = Unischedule;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -507,7 +524,8 @@
 				DEVELOPMENT_TEAM = 32TDRHHMUS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = schedule_app/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ScheduleApp;
+				INFOPLIST_KEY_CFBundleDisplayName = Unischedule;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
