@@ -105,6 +105,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		730068C42979496E0037D1C8 /* TeachersView */ = {
+			isa = PBXGroup;
+			children = (
+				73D594A32973211300574268 /* TeacherInfoViewController.swift */,
+				733B25182975067600625839 /* TeachersListTableViewController.swift */,
+			);
+			path = TeachersView;
+			sourceTree = "<group>";
+		};
+		730068C6297949860037D1C8 /* ScheduleView */ = {
+			isa = PBXGroup;
+			children = (
+				73D7864F29622440000BAF8C /* ScheduleViewController.swift */,
+			);
+			path = ScheduleView;
+			sourceTree = "<group>";
+		};
+		730068C7297949B00037D1C8 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				737476BD29773ABD00DF9163 /* SettingsViewController.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		730068C8297949BE0037D1C8 /* StartViews */ = {
+			isa = PBXGroup;
+			children = (
+				730098B029780193009FC21E /* MainViewController.swift */,
+				730098B2297801A2009FC21E /* ChooseGroupViewController.swift */,
+				730098B4297802CB009FC21E /* HomeTabBarController.swift */,
+			);
+			path = StartViews;
+			sourceTree = "<group>";
+		};
 		73263F692978AA2800F21B82 /* OnboardingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,20 +157,6 @@
 				73819FC9296EF77C006F5C57 /* ThirdTableViewCell.swift */,
 			);
 			path = DayTableViewCells;
-			sourceTree = "<group>";
-		};
-		73819FCE296F323D006F5C57 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				73D7864F29622440000BAF8C /* ScheduleViewController.swift */,
-				73D594A32973211300574268 /* TeacherInfoViewController.swift */,
-				733B25182975067600625839 /* TeachersListTableViewController.swift */,
-				737476BD29773ABD00DF9163 /* SettingsViewController.swift */,
-				730098B029780193009FC21E /* MainViewController.swift */,
-				730098B2297801A2009FC21E /* ChooseGroupViewController.swift */,
-				730098B4297802CB009FC21E /* HomeTabBarController.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		73819FCF296F324B006F5C57 /* Models */ = {
@@ -179,13 +200,16 @@
 		739F46A02938B35700F4B92F /* schedule_app */ = {
 			isa = PBXGroup;
 			children = (
-				73263F692978AA2800F21B82 /* OnboardingView */,
+				730068C8297949BE0037D1C8 /* StartViews */,
+				730068C7297949B00037D1C8 /* SettingsView */,
+				730068C6297949860037D1C8 /* ScheduleView */,
+				73D5949F297312A100574268 /* ScheduleTableViewCells */,
+				730068C42979496E0037D1C8 /* TeachersView */,
 				73D594A0297320B800574268 /* TeacherTableViewCells */,
-				73D7864829621B2F000BAF8C /* fonts */,
+				73263F692978AA2800F21B82 /* OnboardingView */,
 				73819FD0296F3256006F5C57 /* Extensions */,
 				73819FCF296F324B006F5C57 /* Models */,
-				73D5949F297312A100574268 /* ScheduleTableViewCells */,
-				73819FCE296F323D006F5C57 /* Views */,
+				73D7864829621B2F000BAF8C /* fonts */,
 				739F46A12938B35700F4B92F /* AppDelegate.swift */,
 				739F46A32938B35700F4B92F /* SceneDelegate.swift */,
 				739F46A72938B35700F4B92F /* Main.storyboard */,
