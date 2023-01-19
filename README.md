@@ -47,13 +47,10 @@ BY: Kalimatov Akzhan (manste1n)
   <img src="https://github.com/manste1n/schedule_app_iOS/blob/main/Screens/6.png" width="200" title="1">
   &nbsp;
   &nbsp;
-  &nbsp;
    <img src="https://github.com/manste1n/schedule_app_iOS/blob/main/Screens/7.png" width="200" title="1">
   &nbsp;
   &nbsp;
-  &nbsp;
    <img src="https://github.com/manste1n/schedule_app_iOS/blob/main/Screens/8.png" width="200" title="1">
-  &nbsp;
   &nbsp;
   &nbsp;
   <img src="https://github.com/manste1n/schedule_app_iOS/blob/main/Screens/9.png" width="200" title="1">
