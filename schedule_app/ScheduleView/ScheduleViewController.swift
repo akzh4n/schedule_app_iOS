@@ -28,41 +28,54 @@ class ScheduleViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
+            super.viewDidLoad()
+
+            groupLabel.layer.cornerRadius = 10
+            groupLabel.clipsToBounds = true
+            dayTableView.delegate = self
+            dayTableView.dataSource = self
+          
+            
         
-       
+            // Activity settings
         
         
+            activityView.center = self.view.center
+            self.view.addSubview(activityView)
+            dayTableView.isHidden = true
+            groupLabel.isHidden = true
+            activityView.startAnimating()
+            
+            
+            fetchAllData()
+        }
         
-        groupLabel.layer.cornerRadius = 10
-        groupLabel.clipsToBounds = true
-        dayTableView.delegate = self
-        dayTableView.dataSource = self
-        
-        
-        self.fetchAllData()
-        
-    }
-    func fetchAllData() {
-        let db = Firestore.firestore()
-        let userID = Auth.auth().currentUser?.uid
-        if userID != nil {
-            db.collection("Users").document(userID!).getDocument { [self] snapshot, error in
-                if error != nil {
-                    print("Error")
-                }
-                else {
-                    let data = snapshot!.data()
-                    let groupData = data!["group"] as! String
-                  
-                    self.groupLabel.text = groupData
+        func fetchAllData() {
+            let db = Firestore.firestore()
+            let userID = Auth.auth().currentUser?.uid
+            if userID != nil {
+                db.collection("Users").document(userID!).getDocument { [self] snapshot, error in
+                    if error != nil {
+                        print("Error")
+                    }
+                    else {
+                        let data = snapshot!.data()
+                        let groupData = data!["group"] as! String
+                      
+                        self.groupLabel.text = groupData
+                    }
+                    self.activityView.stopAnimating()
+                    self.activityView.isHidden = true
+                    dayTableView.isHidden = false
+                    groupLabel.isHidden = false
+                    
                 }
                 
             }
-            
-        }
+    
+        
+ 
     }
     
 
