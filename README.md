@@ -27,7 +27,6 @@ BY: Kalimatov Akzhan (manste1n)
   &nbsp;
   &nbsp;
   <img src="https://github.com/manste1n/schedule_app_iOS/blob/main/Screens/3.png" width="200" title="2">
-  
 </p>
 
 ## Starting Screens
@@ -38,7 +37,6 @@ BY: Kalimatov Akzhan (manste1n)
   &nbsp;
   &nbsp;
   <img src="https://github.com/manste1n/schedule_app_iOS/blob/main/Screens/5.png" width="200" title="2">
- 
 </p>
 
 ## Schedule, Teachers List, Settings Screens
@@ -48,7 +46,7 @@ BY: Kalimatov Akzhan (manste1n)
   &nbsp;
   &nbsp;
   &nbsp;
-   <img src="https://github.com/manste1n/schedule_app_iOS/blob/main/Screens/7.png" width="200" title="1">
+  <img src="https://github.com/manste1n/schedule_app_iOS/blob/main/Screens/7.png" width="200" title="1">
 </p>
 
 &nbsp;
